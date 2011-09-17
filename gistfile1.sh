@@ -15,6 +15,8 @@ def index():
 bottle.run(server='gevent', port=os.environ.get('PORT', 5000))
 EOF
 
+chmod a+x app.py
+
 echo 'web: app.py' > Procfile
 echo 'env/' > .gitignore
 
