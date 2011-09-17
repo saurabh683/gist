@@ -3,6 +3,7 @@ cd heroku/
 virtualenv --no-site-packages env
 source env/bin/activate
 pip install bottle gevent
+pip freeze > requirements.txt
 
 cat >app.py <<EOF
 import bottle
