@@ -6,6 +6,12 @@ pip install bottle gevent
 pip freeze > requirements.txt
 
 cat >app.py <<EOF
+try:
+    import gevent.monkey
+    gevent.monkey.patch_all()
+except:
+    pass
+
 import bottle
 import os
 
