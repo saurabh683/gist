@@ -19,7 +19,7 @@ import os
 def index():
     return "Hello World"
 
-bottle.run(server='gevent', port=os.environ.get('PORT', 5000))
+bottle.run(server='gevent', host='0.0.0.0', port=os.environ.get('PORT', 5000))
 EOF
 
 chmod a+x app.py
